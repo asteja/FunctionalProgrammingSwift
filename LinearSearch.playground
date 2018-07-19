@@ -1,0 +1,18 @@
+let numbers = [3, 1, 12, 9, 11, 7, 19, 16, 13, 8]
+
+var searchElement = 19
+var ind = 0
+var searchIndex = 0
+
+var searchingIndex = numbers.reduce(0) { (res, element) -> Int in
+        
+    if element == searchElement {
+        searchIndex = ind
+    }
+
+    ind = ind + 1
+    return searchIndex
+
+}
+
+print(searchingIndex)
